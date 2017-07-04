@@ -1,6 +1,5 @@
 export const SHOW_TIME = 'components/clock/SHOW_TIME';
 
-export const showTime = (time) => ({
+export const showTime = () => ({
   type: SHOW_TIME,
-  payload: time,
 });
