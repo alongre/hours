@@ -27,6 +27,7 @@ export class Month extends Component {
     const headers = Object.keys(data[0]);
     headers.push('Start');
     headers.push('End');
+    headers.push('Total');
     headers.push('Comment');
     return headers;
   }

@@ -24,8 +24,10 @@ export default class TableView extends Component {
             >
             <TableRow displayBorder>
                 {
-                   this.props.tableHeaders.map(header =>
-                    <TableHeaderColumn tooltip={header}>
+                   this.props.tableHeaders.map((header, index) =>
+                    <TableHeaderColumn
+                     tooltip={header}
+                     key={index}>
                         {header}
                     </TableHeaderColumn>
                     )
@@ -43,8 +45,8 @@ export default class TableView extends Component {
                     className="tableRow"
                 >
                   {
-                      this.props.tableHeaders.map(header =>
-                        <TableRowColumn>
+                      this.props.tableHeaders.map((header, index) =>
+                        <TableRowColumn key={index}>
                             {data[header]}
                         </TableRowColumn>
                 )}
